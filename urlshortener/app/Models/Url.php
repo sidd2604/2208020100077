@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Url extends Model
+{
+    protected $fillable = ['original_url', 'shortcode', 'expiry'];
+
+    public function logs()
+    {
+        return $this->hasMany(UrlLog::class);
+    }
+}
